@@ -12,5 +12,7 @@ namespace myMVCUnitProject.Models
 
         public int? FinalValue { get; set; }
 
+        [Required]
+        public string? Operation { get; set; }
     }
 }

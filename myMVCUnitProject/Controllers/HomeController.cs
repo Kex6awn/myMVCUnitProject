@@ -18,7 +18,7 @@ namespace myMVCUnitProject.Controllers
         {
             if (ModelState.IsValid)
             {
-                switch (model)
+                switch (model.Operation)
                 {
                     case "Add":
                         model.FinalValue = model.FirstValue + model.SecondValue;
