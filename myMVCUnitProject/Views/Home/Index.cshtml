@@ -1,5 +1,44 @@
 ﻿@*
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
+
+@model myMVCUnitProject.Models.calModels
+
 @{
 }
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<body>
+    <h1>Calculator (Add, Subtract, Multiply, Divide)</h1>
+    <form asp-action="Index" method="post">
+        <div>
+            <label>Enter First Value:</label>
+            <input asp-for="FirstValue" />
+            <span asp-validation-for="FirstValue"></span>
+        </div>
+        <div>
+            <label>Enter Second Value:</label>
+            <input asp-for="SecondValue" />
+            <span asp-validation-for="SecondValue"></span>
+        </div>
+        <div>
+            <label>Operation:</label><br />
+            <input type="radio" asp-for="Operation" value="Add" /> Addition<br />
+            <input type="radio" asp-for="Operation" value="Subtract" /> Subtraction<br />
+            <input type="radio" asp-for="Operation" value="Multiply" /> Multiplication<br />
+            <input type="radio" asp-for="Operation" value="Divide" /> Division<br />
+            <span asp-validation-for="Operation"></span>
+        </div>
+        <button type="submit">Calculate</button>
+    </form>
+
+</body>
+</html>
