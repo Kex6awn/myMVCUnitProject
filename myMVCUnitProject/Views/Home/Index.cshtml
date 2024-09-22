@@ -38,12 +38,16 @@
             <span asp-validation-for="Operation"></span>
         </div>
         <button type="submit">Calculate</button>
-    </form>
-        @if (Model.FinalValue.HasValue)
-    {
-        <div>
-            <h2>Result: @Model.FinalValue</h2>
-        </div>
+    @{
+            <a asp-action="Index">Clear</a>
     }
+    </form>
+    @if (Model.FinalValue.HasValue)
+    {
+            <div>
+                <h2>Result: @Model.FinalValue</h2>
+            </div>
+    }
+
 </body>
 </html>
