@@ -1,5 +1,11 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
+//
+//    Name:           Francis Ferdinard 
+//    Date:           09/22/2024
+//    Description:    Unit 1 Project
+//
+
 namespace myMVCUnitProject.Models
 {
     public class calModels
